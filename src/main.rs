@@ -2,10 +2,15 @@ use std::env;
 use lazy_static::lazy_static;
 mod day1;
 mod day2;
+mod day3;
 
 fn main() {
     lazy_static! {
-        static ref DAYS: [fn(); 2] = [day1::solve, day2::solve];
+        static ref DAYS: [fn(); 3] = [
+            day1::solve,
+            day2::solve,
+            day3::solve,
+        ];
     }
 
     let args: Vec<String> = env::args().skip(1).collect();
